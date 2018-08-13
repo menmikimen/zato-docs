@@ -66,14 +66,14 @@ Method                                                                   Notes
 
         @staticmethod
         def before_add_to_store(logger):
-            logger.info('Adding to store {}'.format(MyService.get_name()))
+            logger.info('Adding to store {}'.format(MyService.get_name_static()))
 
             # Don't forget to return True, otherwise the service won't be deployed
             return True
 
         @staticmethod
         def after_add_to_store(logger):
-            logger.info('Added to store {}'.format(MyService.get_name()))
+            logger.info('Added to store {}'.format(MyService.get_name_static()))
 
         def before_handle(self):
             self.logger.info('before_handle called')

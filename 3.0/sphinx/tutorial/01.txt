@@ -432,7 +432,7 @@ still not possible to access it from the outside.
 A question may arise, how come the service is called my-service.get-client-details?
 It's because Zato uncamelifies strings such as MyFancyName or PrepareCustomerDocuments
 into my-fancy-name or prepare-customer-documents to make them more Pythonic.
-Naturally, this can be :ref:`overridden <progguide-write-service-get_name>`.
+Naturally, this can be :ref:`overridden <progguide-write-service-get_name_static>`.
 
 Exposing a service over HTTP and invoking it
 --------------------------------------------

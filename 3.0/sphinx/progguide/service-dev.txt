@@ -488,7 +488,7 @@ name
 Name of the service under which it will be possible to :ref:`invoke it <progguide-write-service-invoke>` and point to it
 in the web admin. Contrast with :ref:`impl_name <progguide-write-service-impl_name>`.
 
-Visit :ref:`get_name <progguide-write-service-get_name>` for a way to override it.
+Visit :ref:`get_name_static <progguide-write-service-get_name_static>` for a way to override it.
 
 ::
 
@@ -900,12 +900,12 @@ finalize_handle
 Method executed after :ref:`handle <progguide-write-service-handle>` and other service
 hooks have completed. Explained further in the :doc:`chapter on service hooks <./hooks/service>`.
 
-.. _progguide-write-service-get_name:
+.. _progguide-write-service-get_name_static:
 
-get_name
+get_name_static
 ````````
 
-.. py:staticmethod:: get_name()
+.. py:staticmethod:: get_name_static()
 
 A static method that should be implemented to return
 :ref:`service names <progguide-write-service-name>` other than what Zato
@@ -920,7 +920,7 @@ automatically generates.
           self.logger.info('My name is {}'.format(self.name))
 
       @staticmethod
-      def get_name():
+      def get_name_static():
           return 'Something Else'
 
 ::
